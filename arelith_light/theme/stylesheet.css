@@ -1,0 +1,629 @@
+@font-face {
+    font-family: 'Neverwinter';
+    src: url('http://localhost/Neverwinter.otf');
+}
+
+html {height: 100%;}
+
+html, body {
+    background-color: #F5F5F5;
+  
+}
+
+/* Page content wrapper */
+.wrap {
+    grid-area: content;
+    border-radius: 0px;
+    border-color: #0000;
+    /*box-shadow: 1px 1px 7px rgba(0,0,0,0.2);*/
+    background-color: #0000;
+    width: 99.9%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0px;
+}
+
+.content-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #404040;
+}
+
+a {
+    color: #555555;
+    border-bottom: 1px solid rgba(0,0,0,0);
+   /* transition: linear 0.5s;
+    -moz-transition: linear 0.5s;
+    -webkit-transition: linear 0.5s; */
+    text-decoration: none !important; 
+}
+
+a:hover {
+    color: #555;
+   /* border-bottom: 1px solid rgba(0,0,0,1); */
+
+}
+
+span:hover {
+    border-bottom: none;
+}
+
+/*** POSTS ***/
+
+.post-grid-wrap {
+    display: grid;
+    grid-template-columns: 100px calc(100% - 100px);
+}
+
+.postprofile {
+    width: 100%;
+    border: 0px;
+}
+
+.postprofile dt {
+    display: grid;
+}
+
+.postprofile .avatar {
+    float: none;
+}
+
+.postprofile img.avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.postbody {
+    background-color: #fff;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    width: auto;
+}
+
+p.author {
+    margin: 0;
+    padding: 0px;
+}
+
+.post-arrow::before {
+    content: '◀';
+    float: left;
+    font-size: 22px;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    position: relative;
+    right: 32px;
+    bottom: 24px;
+}
+
+.avatar {
+    border-radius: 50%;
+
+}
+
+.avatar-container {
+    justify-self: left;
+}
+
+.rank-title  {
+    border: 1px solid #555;
+    padding: 1px 2px;
+}
+
+.post {
+    border-radius: 0px;
+    box-shadow: 0px;
+    padding: 2px 10px;
+}
+
+.button {
+    border: 0px;
+    background-image: none;
+    background-color: #FAFAFA;
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: #333;
+}
+
+.button:hover {
+    border-color: #0000;
+    background-color: #0000;
+    background-image: none;
+}
+
+.bg1 {
+    background-color: #0000;
+}
+
+
+.bg2 {
+    background-color: #0000;
+}
+
+
+/*** HEADER ***/
+
+.site_logo {
+    background-image:none;
+}
+
+/*
+.site_logo:before {
+    content: 'Arelith';
+    font-size: 40px;
+    font-family: 'Neverwinter', 'Open Sans';
+}
+*/
+
+/* Top header bar */
+.headerbar {
+    color: #404040;
+    border-radius: 0px;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+}
+
+/* Search box */
+.search-header {
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+}
+
+/*** BREADCRUMBS ***/
+ul.navlinks {
+    border-top: 0px;
+}
+
+
+/*** CATEGORIES ***/
+
+/* 'Category' background */
+.forabg{
+    border-radius: 0px;
+    background-color: #0000;
+    background-image: none;
+    /* box-shadow: 1px 1px 7px rgba(0,0,0,0.2); */
+    margin-bottom: 10px;
+}
+
+
+
+.category-title {
+    font-size: 16px;
+    padding: 15px 0px 7px 0px !important;
+    color: #555 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.forum-title {
+    font-size: 16px;
+    padding: 15px 0px 7px 0px !important;
+    color: #555 !important;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Open sans';
+}
+
+
+/*** TOPICS ***/
+
+/* Forum 'topics' wrap background */
+ul.forums {
+    background-color: #0000;
+    background-image: none;
+}
+
+/* forum 'topics' wrap */
+ul.forums {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) ) ;
+    margin-bottom: 10px;
+}
+
+/* Forum topic backgrounds */
+li.row {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2) ;
+}
+
+/* background when hovering forum 'topics' */
+li.row:hover {
+    background-color: #fff;
+}
+
+/* top and bottom lines between forums */
+li.row {
+    border-top-color: #0000;
+    border-bottom-color: #0000;
+}
+
+/* lines to left of topics, posts, last post */
+ul.topiclist dd {
+    border-left-color: #0000;
+}
+
+/* lines to left of topics, posts, last post when hovering */
+li.row:hover dd {
+    border-left-color: #0000;
+}
+
+/* Topic, Posts, Last Post text */
+/* NOW DELETED CONTENT - REMOVE IF NOT REINSTATED FOR FINAL */ 
+li.header dt, li.header dd {
+    color: #333;
+}
+
+/* forum topic & category titles */
+ul.topiclist dt .list-inner {
+    margin-right: 0px;
+    padding-top: 5px;
+}
+
+/* fourm topic image */
+dl.row-item {
+    background-position: 10px 4px;
+}
+.forum_read { background-image: url("./images/forum_read.gif"); }
+
+/* forum topic text */ 
+/*** Breaks floats for thread lists too ***/
+ul.topiclist dt, ul.topiclist dd {
+    Float: none; 
+}
+
+a.forumtitle {
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+/* last post text div */ 
+ul.topiclist li.row dd {
+    padding-left: 52px; 
+}
+
+ul.topiclist li.row dd:before {
+    content: 'Last Post:';
+    
+}
+
+/* last post text */
+a.lastsubject {
+    font-weight: normal;
+}
+
+dd.lastpost > span {
+    padding-left: 0px;
+}
+
+/*-------------------*\
+    Thread lists
+\*-------------------*/
+
+.headerbar, .forumbg {
+    background-color: #000;
+    background-image: none;
+    border-radius: 0px;
+}
+
+.row-item.topic_read_mine {
+    display: grid;
+    grid-template-columns: 35% 20% 10% 10% 25%;
+    justify-items: left;
+    align-items: center;
+    min-height: 40px;
+}
+
+/* thread rows */
+li.row {
+    margin: 4px 0;
+    padding: 5px 0;
+    list-style-type: none;
+}
+
+.row::before {
+    content: none;
+}
+
+.row .pagination {
+    float: left;
+}
+
+dd.posts {
+    width: 100%;
+    text-align: left;
+}
+
+dd.views {
+    width: 100%;
+    text-align: left;
+}
+
+dl.row-item dt, dl.row-item dd {
+    min-height: 0;
+    justify-self: left;
+}
+
+a.topictitle {
+    font-size: 1.7em;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+/*-------------------*\
+    #STAT-BLOCKS
+\*-------------------*/
+
+.stat-block-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+/* Online, birthdays, statistics boxes */
+.stat-block {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+    padding: 1px 10px;
+    margin: 10px 0px;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #fff;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+}
+
+
+/*---------------*\
+     MAIN NAV 
+\*---------------*/
+
+body {margin: 0px; padding: 0px;}
+
+#header {grid-area: header; height: 100%; z-index: 10; background-color: #fff; box-shadow: 1px 1px 7px rgba(0,0,0,0.2); font-family: 'Open Sans'}
+#header h1 {margin: 0px; font-family: 'Neverwinter', 'Open Sans'; font-size: 36px;}
+#header h1 a {color: #333; font-weight: 400; text-decoration: none;}
+.header-content-wrap {display:grid; grid-template-columns: 10% 80% 10%; margin: 0 auto; max-width: 2000px; padding: 0 20px; position: relative; grid-template-areas: "nav-left . nav-small"}
+nav {justify-self: center; margin-top: 12px;}
+nav a {font-weight: 300; font-size: 16px; text-decoration: none; color: #333333; margin: 0 15px; padding-bottom: 3px; border-bottom: 1px solid rgba(0,0,0,0); transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
+nav a:hover {border-bottom: 1px solid #333;}
+.nav-left {grid-area: nav-left;}
+.nav-center {grid-area: nav-center; display: none;}
+.nav-right {grid-area: nav-right; justify-self: end; display: none;}
+.nav-small {grid-area: nav-small; justify-self: end;}
+
+
+/* CSS for Hamburger Nav menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+ /* Full Size Nav - portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:50.063em) {
+	.header-content-wrap {grid-template-areas: "nav-left nav-center nav-right";}
+	.nav-left {}
+	.nav-center {display: block;}
+	.nav-right {display: block;}
+	.nav-small {display: none;}
+}
+
+
+
+
+#whole-page-wrap {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 60px calc(100% - 60px);
+    grid-template-rows: 50px calc(100vh - 55px); 
+    grid-template-areas: 
+    "header header"
+    "sidebar content"
+    ;
+}
+
+.page-expand {
+    grid-template-columns:170px calc(100% - 170px) !important;
+}
+
+#nav-main {
+    display: grid;
+}
+
+/*-------------------*\
+    #SIDEBAR
+\*-------------------*/
+
+/* UI/toolbar */
+.navbar {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-area: sidebar;
+    border-radius: 0px;
+    background-color: #FAFAFA;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    padding: 0px;
+}
+
+.header-profile {
+    padding-left: 0;
+}
+
+a.header-avatar {
+    display: grid;
+    grid-template-columns: 60px calc(100% - 60px);
+}
+/* User avatar */
+a.header-avatar img {
+    max-height: 50px;
+    width: auto;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+a.header-avatar span::after {
+    content: '';
+}
+
+#sidebar {
+    width: 60px;
+}
+
+#sidebar.sidebar-expand {
+    width: 170px;
+    overflow: hidden;
+}
+
+
+.sidebar-button-wrap {
+    height: 36px;
+}
+
+.sidebar-button {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    display:grid;
+    grid-template-columns: 60px calc(100% - 60px);
+}
+
+.sidebar-button:hover {
+    background-color: #efefef;
+}
+
+.sidebar-button .icon {
+    width: 35px;
+    justify-self: center;
+    align-self: center;
+}
+
+.left-justify {
+    justify-self: left !important;
+}
+
+.sidebar-button .icon::before {
+    font-size: 20px;
+}
+
+.sidebar-text {
+    display: none;
+    align-self: center;
+    grid-column: 2 ;
+}
+
+/*** Search dropdown ***/
+
+.sidebar-search {
+    display: grid;
+    grid-template-columns: 7% 93%;
+    justify-items: left;
+}
+
+.search-box {
+    float: none;
+    padding: 8px;
+}
+
+.search-box .inputbox {
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border: 0px;
+    height: 22.2px;
+    width: auto;
+}
+
+.dropdown fieldset.display-options label {
+    text-align: left;
+}
+
+/* nav icons e.g. private message */
+/*** also affects: date/time, 'mark as read', 'last visit' ***/
+ul.linklist > li.rightside, p.rightside, a.rightside {
+    float: none;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.rightside {
+    display: grid;
+}
+
+ul.linklist > li {
+    float: left;
+}
+
+/****************\
+    DROPDOWN
+\****************/
+
+
+
+.dropdown .dropdown-contents {
+    border-radius: 0px;
+    border: 0px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown .pointer {
+    border-color: #fff transparent;
+}
+
+.dropdown-extended .pointer-inner {
+    border-color: #FFF transparent;
+}
+
+.dropdown-extended ul li {
+    border-top: none;
+}
+
+.dropdown-extended ul li:hover {
+    background-color: #efefef;
+}
+
+.dropdown-extended .header {
+    background-image: none;
+    background-color: #fff;
+}
+

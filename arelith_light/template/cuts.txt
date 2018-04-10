@@ -1,0 +1,133 @@
+tempcut
+
+			<!-- IF S_DISPLAY_SEARCHBOX -->
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<div class="search-box" role="search">
+					<form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="sidebar-button">
+						<fieldset class="sidebar-button">
+							<button type="submit" title="{L_SEARCH}">
+								<i class="icon fa-search fa-fw" aria-hidden="true"></i>
+								<span class="sr-only">{L_SEARCH}</span>
+							</button>
+							<span class="sidebar-text">
+								<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_TOPIC}"
+								/>
+							</span>
+							{S_SEARCH_LOCAL_HIDDEN_FIELDS}
+						</fieldset>
+					</form>
+				</div>
+			</li>
+			<!-- ELSE -->
+
+            			<!-- ENDIF -->
+
+
+
+
+
+
+
+
+
+// TO ADD BACK IN
+
+    // Credits and Time
+        <div class="timetime">
+            {CURRENT_TIME} {CREDIT_LINE}
+        </div>
+
+    // Mark as read
+    			<!-- IF U_MARK_FORUMS -->
+			<!-- EVENT index_body_markforums_before -->
+
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_MARK_FORUMS}" class="mark-read rightside sidebar-button" accesskey="m" data-ajax="mark_forums_read">{L_MARK_FORUMS_READ}</a>
+			</li>
+
+			<!-- EVENT index_body_markforums_after -->
+			<!-- ENDIF -->
+
+    // BACK TO TOP
+
+    		<!-- EVENT viewtopic_body_postrow_back2top_before -->
+		<div class="back2top">
+			<!-- EVENT viewtopic_body_postrow_back2top_prepend -->
+			<a href="#top" class="top" title="{L_BACK_TO_TOP}">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">{L_BACK_TO_TOP}</span>
+			</a>
+			<!-- EVENT viewtopic_body_postrow_back2top_append -->
+		</div>
+		<!-- EVENT viewtopic_body_postrow_back2top_after -->
+
+
+
+//SEARCH BOX
+
+<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+			<div id="search-box" class="search-box search-header" role="search">
+				<form action="{U_SEARCH}" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+					<button class="button button-search" type="submit" title="{L_SEARCH}">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
+					</button>
+					<a href="{U_SEARCH}" class="button button-search-end" title="{L_SEARCH_ADV}">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+					</a>
+					{S_SEARCH_HIDDEN_FIELDS}
+				</fieldset>
+				</form>
+			</div>
+			<!-- ENDIF -->
+
+            
+//ONLINE LIST
+
+<div class="stat-block-grid">
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<div class="stat-block online-list">
+		<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+		<p>
+			<!-- EVENT index_body_block_online_prepend -->
+			{TOTAL_USERS_ONLINE} 
+			<!-- IF U_VIEWONLINE -->
+				<br />{LOGGED_IN_USER_LIST}
+				<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+			<!-- ENDIF -->
+			<!-- EVENT index_body_block_online_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+
+//POST STATS
+
+<!-- IF NEWEST_USER -->
+	<div class="stat-block statistics">
+		<h3>{L_STATISTICS}</h3>
+		<p>
+			<!-- EVENT index_body_block_stats_prepend -->
+			{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+			<!-- EVENT index_body_block_stats_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+
+
+// sidebar Jquery
+
+	$(".sidebar-open").click(function () {
+		$(".sidebar-text").toggle();
+		$("#sidebar").css('width', '100%');
+		$(".fa-angle-right").toggleClass('fa-angle-right fa-angle-left');
+	})
+
+
+
+	$(".sidebar-close").click(function () {
+		$(".sidebar-text").hide();
+		$("#sidebar").css('width', '40%');
+	})

@@ -1,0 +1,82 @@
+<div id="notification_list" class="dropdown dropdown-extended notification_list">
+	<div class="pointer">
+		<div class="pointer-inner"></div>
+	</div>
+	<div class="dropdown-contents">
+		<div class="header">
+			POSTS
+		</div>
+
+		<ul>
+			<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_POST_REPLY_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
+					<!-- IF S_IS_LOCKED -->
+					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					<span>{L_BUTTON_TOPIC_LOCKED}</span>
+					<!-- ELSE -->
+					<i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					<span>{L_BUTTON_POST_REPLY}</span>
+					<!-- ENDIF -->
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
+
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_POST_NEW_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
+					<!-- IF S_IS_LOCKED -->
+					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					<span>{L_BUTTON_FORUM_LOCKED}</span>
+					<!-- ELSE -->
+					<i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+					<span>{L_BUTTON_NEW_TOPIC}</span>
+					<!-- ENDIF -->
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF S_REGISTERED_USER -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_SELF}" role="menuitem">
+					<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i>
+					<span>{L_SEARCH_SELF}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF S_USER_LOGGED_IN -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_NEW}" role="menuitem">
+					<i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i>
+					<span>{L_SEARCH_NEW}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF S_LOAD_UNREADS -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_UNREAD}" role="menuitem">
+					<i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i>
+					<span>{L_SEARCH_UNREAD}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_UNANSWERED}" role="menuitem">
+					<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i>
+					<span>{L_SEARCH_UNANSWERED}</span>
+				</a>
+			</li>
+
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_ACTIVE_TOPICS}" role="menuitem">
+					<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i>
+					<span>{L_SEARCH_ACTIVE_TOPICS}</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,184 @@
+<div class="navbar" id="sidebar" role="navigation">
+	<div class="inner">
+
+		<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a title="{L_SITE_HOME}" role="menuitem" class="sidebar-button sidebar-open sidebar-toggle">
+					<i class="icon sidebar-arrow fas fa-angle-right fa-fw" aria-hidden="true"></i>
+				</a>
+			</li>
+
+			<!-- EVENT overall_header_navigation_prepend -->
+			<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"
+				<!-- ELSE -->data-last-responsive="true"
+				<!-- ENDIF -->>
+				<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
+					<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i>
+					<span>{L_FAQ}</span>
+				</a>
+			</li>
+			<!-- EVENT overall_header_navigation_append -->
+
+			<!-- IF S_REGISTERED_USER -->
+			<!-- EVENT navbar_header_user_profile_prepend -->
+
+			<li id="username_logged_in" class="rightside <!-- IF CURRENT_USER_AVATAR --> no-bulletin<!-- ENDIF -->" data-skip-responsive="true">
+				<!-- EVENT navbar_header_username_prepend -->
+
+				<!-- IF CURRENT_USER_AVATAR -->
+				<div class="header-profile dropdown-container">
+					<a href="{U_PROFILE}" class="header-avatar dropdown-trigger">
+						<!-- IF CURRENT_USER_AVATAR -->{CURRENT_USER_AVATAR}
+						<!-- ENDIF -->
+						<span class="sidebar-text username">{CURRENT_USERNAME_SIMPLE}</span>
+					</a>
+				</div>
+				<!-- ELSE -->
+				<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+					<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem" class="sidebar-button">
+						<i class="icon fa-sliders fa-fw" aria-hidden="true"></i>
+						<span class="sidebar-text username">{CURRENT_USERNAME_SIMPLE}</span>
+					</a>
+					</a>
+				</li>
+				<!-- ENDIF -->
+				<!-- EVENT navbar_header_username_append -->
+
+			</li>
+
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="index.php" title="{L_SITE_HOME}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-home fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_SITE_HOME}</span>
+				</a>
+			</li>
+
+
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH}" role="menuitem" class="dropdown-trigger sidebar-button">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_SEARCH}</span>
+				</a>
+				<!-- INCLUDE search_dropdown.html -->
+			</li>
+
+			<!-- IF S_REGISTERED_USER -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_SELF}" role="menuitem" class="dropdown-trigger sidebar-button">
+					<i class="icon fa-file-o fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">Posts</span>
+				</a>
+				<!-- INCLUDE posts_dropdown.html -->
+			</li>
+			<!-- ENDIF -->
+
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem" class="dropdown-trigger sidebar-button">
+					<i class="icon fa-user fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_READ_PROFILE}</span>
+				</a>
+			</li>
+
+			<!-- IF S_NOTIFICATIONS_DISPLAY -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_VIEW_ALL_NOTIFICATIONS}" id="notification_list_button" class="dropdown-trigger sidebar-button">
+					<i class="icon fa-bell fa-fw" aria-hidden="true">
+						<strong class="badge<!-- IF not NOTIFICATIONS_COUNT --> hidden<!-- ENDIF -->">{NOTIFICATIONS_COUNT}</strong>
+					</i>
+					<span class="sidebar-text">{L_NOTIFICATIONS}</span>
+				</a>
+				<!-- INCLUDE notification_dropdown.html -->
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF S_DISPLAY_PM -->
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_PRIVATEMSGS}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-inbox fa-fw" aria-hidden="true">
+						<strong class="badge<!-- IF not PRIVATE_MESSAGE_COUNT --> hidden<!-- ENDIF -->">{PRIVATE_MESSAGE_COUNT}</strong>
+					</i>
+					<span class="sidebar-text">{L_PRIVATE_MESSAGES} </span>
+
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF U_ACP -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_ACP}" title="{L_ACP}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-cogs fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_ACP_SHORT}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- IF U_MCP -->
+			<!-- IF .quickmod -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_SEARCH_SELF}" role="menuitem" class="dropdown-trigger sidebar-button">
+					<i class="icon fa-gavel fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_MCP_SHORT}</span>
+				</a>
+				<!-- INCLUDE mod_dropdown.html -->
+			</li>
+			<!-- ELSE -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_MCP}" title="{L_MCP}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-gavel fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_MCP_SHORT}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- ENDIF -->
+
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem" class="sidebar-button">
+					<i class="icon fa-power-off fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_LOGIN_LOGOUT}</span>
+				</a>
+			</li>
+
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_MEMBERLIST}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-group fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_MEMBERLIST}</span>
+				</a>
+			</li>
+
+			<!-- IF U_TEAM -->
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_TEAM}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">{L_THE_TEAM}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+
+
+			<!-- EVENT navbar_header_user_profile_append -->
+			<!-- ELSE -->
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem" class="sidebar-button">
+					<i class="icon fa-power-off fa-fw" aria-hidden="true"></i>
+					<span>{L_LOGIN_LOGOUT}</span>
+				</a>
+			</li>
+
+
+			<!-- IF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
+			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_REGISTER}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i>
+					<span>{L_REGISTER}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
+			<!-- EVENT navbar_header_logged_out_content -->
+			<!-- ENDIF -->
+		</ul>
+		</ul>
+	</div>
+</div>
