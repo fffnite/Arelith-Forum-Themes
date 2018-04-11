@@ -126,7 +126,7 @@
 			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
 				<a href="{U_MCP}" title="{L_MCP}" role="menuitem" class="sidebar-button">
 					<i class="icon fa-gavel fa-fw" aria-hidden="true"></i>
-					<span class="sidebar-text">{L_MCP_SHORT}</span>
+					<span class="sidebar-text">Moderator CP</span>
 				</a>
 			</li>
 			<!-- ENDIF -->
@@ -154,6 +154,33 @@
 				</a>
 			</li>
 			<!-- ENDIF -->
+
+			<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+			<li class="floating-action-button" data-skip-responsive="true">
+				<a href="{U_POST_REPLY_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
+					<!-- IF S_IS_LOCKED -->
+					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					<!-- ELSE -->
+					<i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					<!-- ENDIF -->
+				</a>
+			</li>
+			<!-- ELSE -->
+
+			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
+			<li class="floating-action-button" data-skip-responsive="true">
+				<a href="{U_POST_NEW_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
+					<!-- IF S_IS_LOCKED -->
+					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					<!-- ELSE -->
+					<i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+					<!-- ENDIF -->
+				</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- ENDIF -->
+
+
 
 
 

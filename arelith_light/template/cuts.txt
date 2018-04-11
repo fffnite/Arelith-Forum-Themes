@@ -32,6 +32,13 @@ tempcut
 
 // TO ADD BACK IN
 
+	// Topic tools (e.g. subscribe to thread)
+		<!-- INCLUDE viewtopic_topic_tools.html -->
+
+
+	// Jumpbox to bottom of viewforum
+		<!-- INCLUDE jumpbox.html -->
+
     // Credits and Time
         <div class="timetime">
             {CURRENT_TIME} {CREDIT_LINE}

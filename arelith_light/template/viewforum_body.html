@@ -1,5 +1,6 @@
 <!-- INCLUDE overall_header.html -->
 <!-- EVENT viewforum_forum_title_before -->
+<!-- IF S_HAS_SUBFORUM -->
 <h2 class="forum-title"><!-- EVENT viewforum_forum_name_prepend --><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a><!-- EVENT viewforum_forum_name_append --></h2>
 <!-- EVENT viewforum_forum_title_after -->
 <!-- IF FORUM_DESC or MODERATORS or U_MCP -->
@@ -24,13 +25,7 @@
 		</div>
 	</div>
 <!-- ENDIF -->
-
 <!-- IF S_HAS_SUBFORUM -->
-<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
-	<div class="action-bar compact">
-		<a href="{U_MARK_FORUMS}" class="mark-read rightside" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a>
-	</div>
-<!-- ENDIF -->
 	<!-- INCLUDE forumlist_body.html -->
 <!-- ENDIF -->
 
@@ -38,15 +33,66 @@
 	<div class="action-bar bar-top">
 
 	<div class="pagination">
-		<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" class="mark" accesskey="m" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->
 		{TOTAL_TOPICS}
 		<!-- IF .pagination -->
 			<!-- INCLUDE pagination.html -->
 		<!-- ELSE -->
-			&bull; {PAGE_NUMBER}
+			<ul>
+				<li class="active"> 
+					<span>1</span>
+				</li>
+			</ul>
 		<!-- ENDIF -->
 	</div>
 
+	</div>
+<!-- ENDIF -->
+
+<!-- ELSE -->
+
+<div class="forum-title-wrap">
+		<h2 class="forum-title"><!-- EVENT viewforum_forum_name_prepend --><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a><!-- EVENT viewforum_forum_name_append --></h2>
+		<!-- EVENT viewforum_forum_title_after -->
+		<!-- IF FORUM_DESC or MODERATORS or U_MCP -->
+		<div>
+			<!-- NOTE: remove the style="display: none" when you want to have the forum description on the forum body -->
+			<!-- IF FORUM_DESC --><div style="display: none !important;">{FORUM_DESC}<br /></div><!-- ENDIF -->
+			<!-- IF MODERATORS --><p><strong><!-- IF S_SINGLE_MODERATOR -->{L_MODERATOR}<!-- ELSE -->{L_MODERATORS}<!-- ENDIF -->{L_COLON}</strong> {MODERATORS}</p><!-- ENDIF -->
+		</div>
+		<!-- ENDIF -->
+		
+		<!-- IF S_FORUM_RULES -->
+			<div class="rules<!-- IF U_FORUM_RULES --> rules-link<!-- ENDIF -->">
+				<div class="inner">
+		
+				<!-- IF U_FORUM_RULES -->
+					<a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
+				<!-- ELSE -->
+					<strong>{L_FORUM_RULES}</strong><br />
+					{FORUM_RULES}
+				<!-- ENDIF -->
+		
+				</div>
+			</div>
+		<!-- ENDIF -->		
+		<!-- IF S_DISPLAY_POST_INFO or .pagination or TOTAL_POSTS or TOTAL_TOPICS -->
+			<div class="action-bar bar-top">
+		
+			<div class="pagination">
+				{TOTAL_TOPICS}
+				<!-- IF .pagination -->
+					<!-- INCLUDE pagination.html -->
+				<!-- ELSE -->
+					<ul>
+						<li class="active"> 
+							<span>1</span>
+						</li>
+					</ul>
+				<!-- ENDIF -->
+			</div>
+		
+			</div>
+		<!-- ENDIF -->
 	</div>
 <!-- ENDIF -->
 
@@ -96,16 +142,19 @@
 
 <!-- ENDIF -->
 
+
+
 <!-- EVENT viewforum_body_topic_row_before -->
 
 <!-- BEGIN topicrow -->
 
 	<!-- IF not topicrow.S_TOPIC_TYPE_SWITCH and not topicrow.S_FIRST_ROW -->
-		</ul>
+			<!--
+			</ul>
+			<</div>
 		</div>
-	</div>
+	-->
 	<!-- ENDIF -->
-
 		<!-- EVENT viewforum_body_topicrow_row_before -->
 		<li class="row<!-- IF topicrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
 			<!-- EVENT viewforum_body_topic_row_prepend -->
@@ -202,24 +251,20 @@
 		<div class="action-bar bar-bottom">
 
 
-				<!-- IF S_SELECT_SORT_DAYS and not S_IS_BOT -->
-					<form method="post" action="{S_FORUM_ACTION}">
-					<!-- INCLUDE display_options.html -->
-					</form>
-				<!-- ENDIF -->
-
 				<div class="pagination">
-					<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->
 					{TOTAL_TOPICS}
 					<!-- IF .pagination -->
 						<!-- INCLUDE pagination.html -->
 					<!-- ELSE -->
-						&bull; {PAGE_NUMBER}
+						<ul>
+							<li class="active"> 
+								<span>1</span>
+							</li>
+						</ul>
 					<!-- ENDIF -->
 				</div>
 			</div>
 		<!-- ENDIF -->
-		<!-- INCLUDE jumpbox.html -->
 	</div>
 	
 	<!-- ENDIF -->

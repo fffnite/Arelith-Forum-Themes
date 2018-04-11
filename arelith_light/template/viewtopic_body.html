@@ -1,6 +1,7 @@
 <!-- INCLUDE overall_header.html -->
 
 <!-- EVENT viewtopic_topic_title_before -->
+<div class="topic-title-wrap">
 <h2 class="topic-title"><!-- EVENT viewtopic_topic_title_prepend --><a href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a><!-- EVENT viewtopic_topic_title_append --></h2>
 <!-- EVENT viewtopic_topic_title_after -->
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
@@ -30,25 +31,24 @@
 <div class="action-bar bar-top">
 	<!-- EVENT viewtopic_buttons_top_before -->
 
-
-
-	<!-- EVENT viewtopic_buttons_top_after -->
-	<!-- INCLUDE viewtopic_topic_tools.html -->
-	<!-- EVENT viewtopic_dropdown_top_custom -->
-
 	<!-- IF .pagination or TOTAL_POSTS -->
 		<div class="pagination">
 			<!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --><a href="{U_VIEW_UNREAD_POST}" class="mark">{L_VIEW_UNREAD_POST}</a> &bull; <!-- ENDIF -->{TOTAL_POSTS}
 			<!-- IF .pagination -->
 				<!-- INCLUDE pagination.html -->
 			<!-- ELSE -->
-				&bull; {PAGE_NUMBER}
+				<ul>
+					<li class="active"> 
+						<span>1</span>
+					</li>
+				</ul>
 			<!-- ENDIF -->
 		</div>
 	<!-- ENDIF -->
 	<!-- EVENT viewtopic_body_pagination_top_after -->
 </div>
 
+</div>
 <!-- EVENT viewtopic_body_poll_before -->
 
 <!-- IF S_HAS_POLL -->
@@ -327,14 +327,6 @@
 	
 	<!-- EVENT viewtopic_buttons_bottom_after -->
 
-	<!-- INCLUDE viewtopic_topic_tools.html -->
-
-	<!-- IF (S_NUM_POSTS > 1 or .pagination) and not S_IS_BOT  -->
-		<form method="post" action="{S_TOPIC_ACTION}">
-		<!-- INCLUDE display_options.html -->
-		</form>
-	<!-- ENDIF -->
-
 	<!-- EVENT viewtopic_dropdown_bottom_custom -->
 
 	<!-- IF .pagination or TOTAL_POSTS -->
@@ -343,14 +335,17 @@
 			<!-- IF .pagination -->
 				<!-- INCLUDE pagination.html -->
 			<!-- ELSE -->
-				&bull; {PAGE_NUMBER}
+				<ul>
+					<li class="active"> 
+						<span>1</span>
+					</li>
+				</ul>
 			<!-- ENDIF -->
 		</div>
 	<!-- ENDIF -->
 </div>
 
 <!-- EVENT viewtopic_body_footer_before -->
-<!-- INCLUDE jumpbox.html -->
 
 
 

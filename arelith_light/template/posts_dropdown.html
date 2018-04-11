@@ -8,6 +8,28 @@
 		</div>
 
 		<ul>
+			<!-- IF S_HAS_SUBFORUM -->
+			<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_MARK_FORUMS}" role="menuitem" class="mark-read rightside" data-ajax="mark_forums_read">
+						<i class="icon fa-check fa-fw" aria-hidden="true"></i>
+					<span>{L_MARK_SUBFORUMS_READ}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- ENDIF -->
+			
+
+
+			<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow -->
+			<li class="sidebar-button-wrap" data-skip-responsive="true">
+				<a href="{U_MARK_TOPICS}" role="menuitem" class="mark" accesskey="m" data-ajax="mark_topics_read">
+					<i class="icon fa-check fa-fw" aria-hidden="true"></i>
+					<span>{L_MARK_TOPICS_READ}</span>
+				</a>
+			</li>
+			<!-- ENDIF -->
+
 			<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
 			<li class="sidebar-button-wrap" data-skip-responsive="true">
 				<a href="{U_POST_REPLY_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
