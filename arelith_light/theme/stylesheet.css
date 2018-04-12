@@ -989,3 +989,12 @@ input.button2:hover {
 .global_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
 .global_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .global_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+
+/*-----------------------*\
+    CHROME SCROLLING FIX
+\*-----------------------*/
+
+.sr-only {
+    display: none;
+}
