@@ -915,38 +915,38 @@ input.button2:hover {
 
 /* New Icons */
 
-.topic_unread::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_unread_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_unread_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_unread_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_unread_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_unread_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_unread_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .topic_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .topic_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
-.topic_read::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_read_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_read_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_read_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_read_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_read_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_read_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .topic_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .topic_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
-.topic_unread_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_unread_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_read_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.topic_read_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_unread_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_read_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.topic_read_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 
-.topic_moved {content: "\e0b2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_moved {content: "\e0b2"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 
-.sticky_unread::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_unread_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_unread_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_unread_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_unread::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_unread_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_unread_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_unread_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .sticky_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
 .sticky_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
 
-.sticky_read::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_read_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_read_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.sticky_read_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_read::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_read_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_read_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.sticky_read_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .sticky_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
 .sticky_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
 
@@ -962,31 +962,31 @@ input.button2:hover {
 
 .forum_link::before {content: "\e157"; font-family: 'Material Icons'; font-size: 3em; justify-self: center; float:left; margin-left: 7px;}
 
-.announce_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_unread_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_unread_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_unread_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_unread_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .announce_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .announce_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
-.announce_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.announce_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.announce_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .announce_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .announce_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
-.global_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_unread_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_unread_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_unread_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_unread_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .global_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .global_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
-.global_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
-.global_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
+.global_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: left; padding-left: 8px; color: #555;}
 .global_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 .global_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
 
