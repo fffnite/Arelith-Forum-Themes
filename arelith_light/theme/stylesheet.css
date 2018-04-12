@@ -33,6 +33,13 @@ h1 {
     color: #404040;
 }
 
+h3 {
+    color: #333;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-weight: normal;
+}
+
 a {
     color: #555555;
     border-bottom: 1px solid rgba(0,0,0,0);
@@ -327,7 +334,7 @@ dd.lastpost > span {
 
 .row-item {
     display: grid;
-    grid-template-columns: 35% 20% 10% 10% 25%;
+    grid-template-columns: 2% 33% 20% 10% 10% 25%;
     justify-items: left;
     align-items: center;
     min-height: 40px;
@@ -668,7 +675,7 @@ ul.linklist > li {
 
 .floating-action-button {
     position: fixed;
-    background-color: #ececec;
+    background-color: cornflowerblue;
     border-radius: 50%;
     bottom: 96px;
     right: 65px;
@@ -692,4 +699,308 @@ ul.linklist > li {
 .floating-action-button i {
     font-size: 2em;
     line-height: 56px;
+    color: #fff;
 }
+
+
+/*-------------*\
+    NEW POSTS
+\*-------------*/
+
+.panel {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 0px;
+}
+
+
+/*--------*\
+    TABS
+\*--------*/
+
+.tabs {
+    margin: 20px 0 0 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.tabs .activetab {
+    border-bottom: 3px solid cornflowerblue;
+}
+
+.tabs .activetab a {
+    color: #333 !important;
+    padding: 10px 12px;
+    margin: 1px 1px 0 0;
+    
+}
+
+.tabs .activetab a:hover {
+    background-image: none;
+}
+
+.tabs .tab:hover {
+    border-bottom: 3px solid cornflowerblue;
+}
+
+.tabs .tab a {
+    background-image: none;
+    background-color: #0000;  
+    border: none;
+    border-radius: 0px;
+    color: #777;
+    text-transform: uppercase;
+    padding: 10px 12px;
+}
+
+.tabs .tab a:hover {
+    background-color: #0000;
+    
+    color: #333;
+}
+
+
+/*----------*\
+    Buttons
+\*----------*/
+
+input.button1 {
+    border: none;
+    background-image: none;
+    background-color: cornflowerblue;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+input.button1:hover {
+    border: none;
+    background-image: none;
+    background-color:  cornflowerblue;
+    color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+input.button2 {
+    border: none;
+    background-image: none;
+    background-color: cornflowerblue;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+input.button2:hover {
+    border: none;
+    background-image: none;
+    background-color:  cornflowerblue;
+    color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+/*---------------*\
+    INPUT BOX
+\*---------------*/
+
+.inputbox:hover {
+    border-color: cornflowerblue;
+}
+
+
+/*---------------*\
+    Pagination
+\*---------------*/
+
+.pagination li.active span {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.pagination li a:hover  {
+    background-color: cornflowerblue;
+}
+
+.pagination li a:hover .icon {
+    background-color: cornflowerblue;
+}
+
+
+/*-----------*\
+    CP Menu
+\*-----------*/
+
+.navigation a {
+    background-image: none;
+}
+
+.navigation a:hover {
+    background-color: #efefef;
+    color: #333;
+}
+
+.navigation .active-subsection a {
+    background-color: #efefef;
+    color: #333;
+}
+
+.navigation .active-subsection a:hover {
+    color: #333;
+}
+
+
+/*--------*\
+    Icons
+\*--------*/
+
+.topic_unread {background-image: none;}
+.topic_unread_mine {background-image: none;}
+.topic_unread_locked {background-image: none;}
+.topic_unread_locked_mine {background-image: none;}
+
+.topic_read {background-image: none;}
+.topic_read_mine {background-image: none;}
+.topic_read_locked {background-image: none;}
+.topic_read_locked_mine {background-image: none;}
+
+.topic_unread_hot {background-image: none;}
+.topic_unread_hot_mine {background-image: none;}
+.topic_read_hot {background-image: none;}
+.topic_read_hot_mine {background-image: none;}
+
+.topic_moved {background-image: none;}
+
+.sticky_unread {background-image: none;}
+.sticky_unread_mine {background-image: none;}
+.sticky_unread_locked {background-image: none;}
+.sticky_unread_locked_mine {background-image: none;}
+
+.sticky_read {background-image: none;}
+.sticky_read_mine {background-image: none;}
+.sticky_read_locked {background-image: none;}
+.sticky_read_locked_mine {background-image: none;}
+
+.forum_unread {background-image: none;}
+.forum_unread_subforum {background-image: none;}
+.forum_unread_locked {background-image: none;}
+
+.forum_read {background-image: none;}
+.forum_read_subforum {background-image: none;}
+.forum_read_locked {background-image: none;}
+
+.forum_link {background-image: none;}
+
+.announce_unread {background-image: none;}
+.announce_unread_mine {background-image: none;}
+.announce_unread_locked {background-image: none;}
+.announce_unread_locked_mine {background-image: none;}
+
+.announce_read {background-image: none;}
+.announce_read_mine {background-image: none;}
+.announce_read_locked {background-image: none;}
+.announce_read_locked_mine {background-image: none;}
+
+.global_unread {background-image: none;}
+.global_unread_mine {background-image: none;}
+.global_unread_locked {background-image: none;}
+.global_unread_locked_mine {background-image: none;}
+
+.global_read {background-image: none;}
+.global_read_mine {background-image: none;}
+.global_read_locked {background-image: none;}
+.global_read_locked_mine {background-image: none;}
+
+/* New Icons */
+
+.topic_unread::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.topic_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+.topic_read {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_locked::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_locked_mine::before {content: "\e8d2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.topic_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+.topic_unread_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_unread_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_hot::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.topic_read_hot_mine::before {content: "\e80e"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+
+.topic_moved {content: "\e0b2"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+
+.sticky_unread::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_unread_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_unread_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_unread_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
+.sticky_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
+
+
+.sticky_read {background-image: none;}
+.sticky_read_mine {background-image: none;}
+.sticky_read_locked {background-image: none;}
+.sticky_read_locked_mine {background-image: none;}
+
+.sticky_read::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_read_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_read_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_read_locked_mine::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.sticky_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
+.sticky_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px}
+
+/* forums */
+.forum_unread::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.forum_unread_subforum::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.forum_unread_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+
+.forum_read::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.forum_read_subforum::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.forum_read_locked::before {content: "\e55f"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+
+.forum_link::before {background-image: none;}
+
+.announce_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_unread_locked {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_unread_locked_mine {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.announce_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+.announce_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.announce_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.announce_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+.global_read {background-image: none;}
+.global_read_mine {background-image: none;}
+.global_read_locked {background-image: none;}
+.global_read_locked_mine {background-image: none;}
+
+.global_unread::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_unread_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_unread_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_unread_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_unread_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.global_unread_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+.global_read::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_read_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_read_locked::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_read_locked_mine::before {content: "\e85a"; font-family: 'Material Icons'; font-size: 3em; justify-self: center;}
+.global_read_locked .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+.global_read_locked_mine .topictitle::after {content: "\e897"; font-family: 'Material Icons'; font-size: 0.8em; margin-left: 10px;}
+
+
+
+
+
