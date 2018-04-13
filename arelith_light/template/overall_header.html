@@ -28,8 +28,7 @@
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<script src="./styles/arelith_light/template/infinite-scroll.pkgd.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 <!-- IF S_ALLOW_CDN -->
 <script>
@@ -48,9 +47,24 @@
 </script>
 <!-- ENDIF -->
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
-<link href="{ROOT_PATH}styles/prosilver/theme/stylesheet.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+
+<link href="{ROOT_PATH}styles/prosilver/theme/common.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/links.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/content.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/buttons.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/cp.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/forms.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/icons.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{ROOT_PATH}styles/prosilver/theme/colours.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+
+
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
+
+<link href="{ROOT_PATH}styles/prosilver/theme/{T_THEME_LANG_NAME}/stylesheet.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+
 <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
+<script src="./styles/arelith_light/template/infinite-scroll.pkgd.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
@@ -121,6 +135,12 @@
 				<span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 			</div>
 			<!--END .nav-small-->
+
+			<div class="nav-mini">
+				<a class="sidebar-open sidebar-toggle">
+					<i class="icon sidebar-arrow fas fa-angle-right fa-fw" aria-hidden="true"></i>
+				</a>
+			</div>
 		</div>
 		<!--END .header-content-wrap-->
 	</div>

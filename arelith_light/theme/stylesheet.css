@@ -7,6 +7,7 @@ html {height: 100%;}
 
 html, body {
     background-color: #F5F5F5;
+    color: #333;
   
 }
 
@@ -22,6 +23,7 @@ html, body {
     margin: 0 auto;
     overflow: auto;
     padding: 0px;
+    min-width: auto;
 }
 
 .content-wrap {
@@ -180,18 +182,21 @@ p.author {
     box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
 }
 
-/* breadcrumbs */
-ul.navlinks {
-    border-top: 0px;
-}
 
 
 /*-----------------*\
     BREADCRUMBS
 \*----------------*/
 
+#nav-breadcrumbs {padding-left: 0px;}
+
 .breadcrumbs .crumb {
     font-weight: normal;
+}
+
+/* breadcrumbs */
+ul.navlinks {
+    border-top: 0px;
 }
 
 /*** CATEGORIES ***/
@@ -226,6 +231,8 @@ ul.navlinks {
 
 
 /*** TOPICS ***/
+
+.topic-icon {color:#777;}
 
 /* Forum 'topics' wrap background */
 ul.forums {
@@ -303,9 +310,12 @@ a.forumtitle {
     font-weight: 500;
 }
 
+ul.topiclist {padding-left: 0px;}
+
 /* last post text div */ 
 ul.topiclist li.row dd {
-    padding-left: 52px; 
+    padding-top: 8px;
+    padding-left: 12px; 
 }
 
 ul.topiclist li.row dd:before {
@@ -431,7 +441,7 @@ body {margin: 0px; padding: 0px;}
 #header {grid-area: header; height: 100%; z-index: 10; background-color: #fff; box-shadow: 1px 1px 7px rgba(0,0,0,0.2); font-family: 'Open Sans'}
 #header h1 {margin: 0px; font-family: 'Neverwinter', 'Open Sans'; font-size: 36px;}
 #header h1 a {color: #333; font-weight: 400; text-decoration: none;}
-.header-content-wrap {display:grid; grid-template-columns: 10% 80% 10%; margin: 0 auto; max-width: 2000px; padding: 0 20px; position: relative; grid-template-areas: "nav-left . nav-small"}
+.header-content-wrap {display:grid; grid-template-columns: 10% 80% 10%; margin: 0 auto; max-width: 2000px; padding: 0 20px; position: relative; grid-template-areas: "nav-mini nav-left  nav-small"}
 nav {justify-self: center; margin-top: 12px;}
 nav a {font-weight: 300; font-size: 16px; text-decoration: none; color: #333333; margin: 0 15px; padding-bottom: 3px; border-bottom: 1px solid rgba(0,0,0,0); transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
 nav a:hover {border-bottom: 1px solid #333;}
@@ -439,6 +449,7 @@ nav a:hover {border-bottom: 1px solid #333;}
 .nav-center {grid-area: nav-center; display: none;}
 .nav-right {grid-area: nav-right; justify-self: end; display: none;}
 .nav-small {grid-area: nav-small; justify-self: end;}
+.nav-mini {grid-area: nav-mini; display: none;}
 
 
 /* CSS for Hamburger Nav menu */
@@ -481,18 +492,6 @@ nav a:hover {border-bottom: 1px solid #333;}
     right: 45px;
     font-size: 60px;
 }
-
- /* Full Size Nav - portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-@media (min-width:50.063em) {
-	.header-content-wrap {grid-template-areas: "nav-left nav-center nav-right";}
-	.nav-left {}
-	.nav-center {display: block;}
-	.nav-right {display: block;}
-	.nav-small {display: none;}
-}
-
-
-
 
 #whole-page-wrap {
     display: grid;
@@ -997,4 +996,54 @@ input.button2:hover {
 
 .sr-only {
     display: none;
+}
+
+
+/*----------------------*\
+    MEDIA QUERIES
+\*----------------------*/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+     .row-item {grid-template-columns: 2% 30% 20% 10% 10% 25%}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .row-item {grid-template-columns: 2% 30% 25% 7% 7% 25%;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 800px) {
+    .row .topic-poster .lastpost {display: none;}
+    .row-item {grid-template-columns: 2% 35% 0% 10% 10% 25%;}
+    .postprofile img.avatar {width: 45px; height: 45px;}
+    .post-grid-wrap {grid-template-columns: 80px calc(100% - 80px);}
+}
+
+ /* Full Size Nav - portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+ @media (min-width:50.063em) {
+	.header-content-wrap {grid-template-areas: "nav-left nav-center nav-right";}
+	.nav-center {display: block;}
+	.nav-right {display: block;}
+	.nav-small {display: none;}
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 580px) {
+    .row-item .lastpost {display: none;}
+    .row-item {grid-template-columns: 2% 55% 0% 17% 17% 0%;}
+    #whole-page-wrap {grid-template-areas: "header header" "content content";}
+    .sidebar-mini {display: none;}
+    .nav-mini {display: initial;}
+    .sidebar-expand {display: initial;}
+    .page-expand {grid-template-areas: "header header" "sidebar content" !important;}
+    .nav-left {justify-self: center;}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
 }
