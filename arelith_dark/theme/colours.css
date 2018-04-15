@@ -1,0 +1,71 @@
+/* background-color; color; border; transition */
+
+#header {background-color: #121212;}
+#sidebar {background-color: #212121;}
+#wrap {background-color: #303030;}
+
+li.row {background-color: #424242;}
+.postbody {background-color: #424242;}
+.post-arrow::before {color: #424242;}
+.panel {background-color: #424242;}
+.tabs {background-color: #424242; border-bottom: 1px solid #2d2d2d;}
+nav a:hover {border-bottom-color: inherit;}
+.headerbar, .forumbg {background-color: #424242;}
+
+/* text */
+
+a {color: rgba(255,255,255,0.7);}
+.search-box .inputbox {color: rgba(255,255,255,0.7);}
+button {color:rgba(255,255,255,0.7);}
+
+body {color: rgba(255,255,255,0.5);}
+
+/* Sidebar */
+
+
+.dropdown-extended .header {background-color: #212121;}
+.dropdown-extended ul li {background-color: #212121;}
+.dropdown-extended form {background-color: #212121;}
+.dropdown-extended .search-box {background-color: #212121;}
+.dropdown-extended .footer {background-color: #212121;}
+.search-box .inputbox {background-color: #212121;}
+button {background-color: #212121;}
+.button {background-color: #212121;}
+.button:hover {background-color: #009ec3;}
+
+.sidebar-button:hover {background-color: #2d2d2d;}
+.dropdown-extended ul li:hover {background-color: #2d2d2d;}
+.navigation a:hover {background-color: #2d2d2d;}
+.navigation .active-subsection a {background-color: #2d2d2d;}
+
+select {background-color: inherit; color: inherit;}
+option {background-color: #2d2d2d; color: inherit;}
+
+/* accents */
+
+.badge {background-color: #009ec3; color: #fff;}
+.floating-action-button {background-color: #009ec3;}
+.pagination li.active span {background-color: #009ec3; border-color: #009ec3;}
+.pagination li a:hover {background-color: #009ec3;}
+.pagination li a:hover .icon {background-color: #009ec3;}
+.tabs .activetab {border-color: #009ec3;}
+.tabs .tab:hover {border-color: #009ec3;}
+input.button1 {background-color: #009ec3; color: rgba(255,255,255,0.7);}
+input.button2 {background-color: #009ec3; color: rgba(255,255,255,0.7);}
+
+
+/* Input boxes */
+
+.inputbox {color: inherit; background-color: inherit; border-bottom: 2px solid #eee; transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
+.inputbox:hover {border-bottom: 2px solid #009ec3;}
+.inputbox:focus {border-bottom: 2px solid #009ec3;}
+textarea.inputbox {border: 2px solid #eee; transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
+textarea.inputbox:hover {border: 2px solid #009ec3;}
+textarea.inputbox:focus {border: 2px solid #009ec3;}
+
+/* Pagination */
+
+tr:hover {background-color: #212121;}
+.pagination li {color: #fff;}
+.pagination li a:hover {color: #fff;}
+
