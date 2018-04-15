@@ -380,7 +380,16 @@ dd.lastpost > span {
 
 .cplist .row-item {
     display: grid;
+    grid-template-columns: 2% 50% 48%
 }
+
+ul.topiclist.two-long-columns dt .list-inner {
+    margin-right: 0px;
+}
+
+.pmlist .row-item {display: block;}
+
+.search-results .row-item {display: grid;}
 
 /* thread rows */
 li.row {
@@ -629,9 +638,13 @@ a.header-avatar span::after {
     padding: 0px;
 }
 
+.search-header {
+    margin: 0px;
+}
+
 .search-box {
     float: none;
-    padding: 8px;
+    padding: 6px;
 }
 
 .search-box .inputbox {

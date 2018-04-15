@@ -4,7 +4,6 @@
 }
 
 
-
 .dropdown-extended ul li {
     background-color: #fff;
 }
@@ -22,14 +21,35 @@ button {
     color: #555;
 }
 
-.search-box .inputbox {
+.inputbox {
+    border-bottom: 2px solid #eee;
+    transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;
+}
+
+.inputbox:hover {
     border-bottom: 2px solid cornflowerblue;
+}
+
+.inputbox:focus {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+textarea.inputbox {
+    transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;
+    border: 2px solid #eee;
+}
+
+textarea.inputbox:hover {
+    border: 2px solid cornflowerblue;
+}
+
+textarea.inputbox:focus {
+    border: 2px solid cornflowerblue;
 }
 
 .dropdown-extended .footer {
     background-color: #fff;
 }
-
 
 
 tr:hover {
