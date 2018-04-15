@@ -3,22 +3,13 @@
 
 		<ul id="nav-main" class="nav-main linklist" role="menubar">
 
-			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
-				<a title="{L_SITE_HOME}" role="menuitem" class="sidebar-button sidebar-open sidebar-toggle">
+			<li class="rightside sidebar-button-wrap sidebar-toggle-arrow" data-skip-responsive="true">
+				<a title="Sidebar Toggle" role="menuitem" class="sidebar-button sidebar-open sidebar-toggle">
 					<i class="icon sidebar-arrow fas fa-angle-right fa-fw" aria-hidden="true"></i>
 				</a>
 			</li>
 
-			<!-- EVENT overall_header_navigation_prepend -->
-			<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"
-				<!-- ELSE -->data-last-responsive="true"
-				<!-- ENDIF -->>
-				<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
-					<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i>
-					<span>{L_FAQ}</span>
-				</a>
-			</li>
-			<!-- EVENT overall_header_navigation_append -->
+
 
 			<!-- IF S_REGISTERED_USER -->
 			<!-- EVENT navbar_header_user_profile_prepend -->
@@ -28,19 +19,20 @@
 
 				<!-- IF CURRENT_USER_AVATAR -->
 				<div class="header-profile dropdown-container">
-					<a href="{U_PROFILE}" class="header-avatar dropdown-trigger">
+					<a href="{U_PROFILE}" class="header-avatar dropdown-trigger sidebar-button">
 						<!-- IF CURRENT_USER_AVATAR -->{CURRENT_USER_AVATAR}
 						<!-- ENDIF -->
 						<span class="sidebar-text username">{CURRENT_USERNAME_SIMPLE}</span>
 					</a>
+					<!-- INCLUDE profile_dropdown.html -->
 				</div>
 				<!-- ELSE -->
-				<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
+				<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
 					<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem" class="sidebar-button">
-						<i class="icon fa-sliders fa-fw" aria-hidden="true"></i>
+						<i class="icon fa-user fa-fw" aria-hidden="true"></i>
 						<span class="sidebar-text username">{CURRENT_USERNAME_SIMPLE}</span>
 					</a>
-					</a>
+					<!-- INCLUDE profile_dropdown.html -->
 				</li>
 				<!-- ENDIF -->
 				<!-- EVENT navbar_header_username_append -->
@@ -72,13 +64,6 @@
 				<!-- INCLUDE posts_dropdown.html -->
 			</li>
 			<!-- ENDIF -->
-
-			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
-				<a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem" class="dropdown-trigger sidebar-button">
-					<i class="icon fa-user fa-fw" aria-hidden="true"></i>
-					<span class="sidebar-text">{L_READ_PROFILE}</span>
-				</a>
-			</li>
 
 			<!-- IF S_NOTIFICATIONS_DISPLAY -->
 			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap" data-skip-responsive="true">
@@ -139,73 +124,52 @@
 				</a>
 			</li>
 
-			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
-				<a href="{U_MEMBERLIST}" role="menuitem" class="sidebar-button">
-					<i class="icon fa-group fa-fw" aria-hidden="true"></i>
-					<span class="sidebar-text">{L_MEMBERLIST}</span>
-				</a>
-			</li>
-
-			<!-- IF U_TEAM -->
-			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
-				<a href="{U_TEAM}" role="menuitem" class="sidebar-button">
-					<i class="icon fa-shield fa-fw" aria-hidden="true"></i>
-					<span class="sidebar-text">{L_THE_TEAM}</span>
-				</a>
-			</li>
-			<!-- ENDIF -->
-
-			<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
-			<li class="floating-action-button" data-skip-responsive="true">
-				<a href="{U_POST_REPLY_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
-					<!-- IF S_IS_LOCKED -->
-					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
-					<!-- ELSE -->
-					<i class="icon fa-reply fa-fw" aria-hidden="true"></i>
-					<!-- ENDIF -->
-				</a>
-			</li>
-			<!-- ELSE -->
-
-			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
-			<li class="floating-action-button" data-skip-responsive="true">
-				<a href="{U_POST_NEW_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
-					<!-- IF S_IS_LOCKED -->
-					<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
-					<!-- ELSE -->
-					<i class="icon fa-plus fa-fw" aria-hidden="true"></i>
-					<!-- ENDIF -->
-				</a>
-			</li>
-			<!-- ENDIF -->
-			<!-- ENDIF -->
-
-
-
-
-
 			<!-- EVENT navbar_header_user_profile_append -->
 			<!-- ELSE -->
 			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
 				<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem" class="sidebar-button">
 					<i class="icon fa-power-off fa-fw" aria-hidden="true"></i>
-					<span>{L_LOGIN_LOGOUT}</span>
+					<span class="sidebar-text">{L_LOGIN_LOGOUT}</span>
 				</a>
 			</li>
-
-
-			<!-- IF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
-			<li class="rightside sidebar-button-wrap" data-skip-responsive="true">
-				<a href="{U_REGISTER}" role="menuitem" class="sidebar-button">
-					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i>
-					<span>{L_REGISTER}</span>
-				</a>
-			</li>
-			<!-- ENDIF -->
-
 			<!-- EVENT navbar_header_logged_out_content -->
 			<!-- ENDIF -->
+
+			<!-- EVENT overall_header_navigation_prepend -->
+			<li class="dropdown-container dropdown-{S_CONTENT_FLOW_END} rightside sidebar-button-wrap">
+				<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem" class="sidebar-button">
+					<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i>
+					<span class="sidebar-text">Info</span>
+				</a>
+				<!-- INCLUDE info_dropdown.html -->
+			</li>
+			<!-- EVENT overall_header_navigation_append -->
 		</ul>
 		</ul>
 	</div>
 </div>
+
+<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+<li class="floating-action-button" data-skip-responsive="true">
+	<a href="{U_POST_REPLY_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->">
+		<!-- IF S_IS_LOCKED -->
+		<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+		<!-- ELSE -->
+		<i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+		<!-- ENDIF -->
+	</a>
+</li>
+<!-- ELSE -->
+
+<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
+<li class="floating-action-button" data-skip-responsive="true">
+	<a href="{U_POST_NEW_TOPIC}" role="menuitem" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
+		<!-- IF S_IS_LOCKED -->
+		<i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+		<!-- ELSE -->
+		<i class="icon fa-plus fa-fw" aria-hidden="true"></i>
+		<!-- ENDIF -->
+	</a>
+</li>
+<!-- ENDIF -->
+<!-- ENDIF -->

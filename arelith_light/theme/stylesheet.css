@@ -1,3 +1,5 @@
+@import url("colours.css");
+
 @font-face {
     font-family: 'Neverwinter';
     src: url('http://localhost/Neverwinter.otf');
@@ -8,8 +10,9 @@ html {height: 100%;}
 html, body {
     background-color: #F5F5F5;
     color: #333;
-  
 }
+
+body {height: 100%;}
 
 /* Page content wrapper */
 .wrap {
@@ -129,6 +132,8 @@ p.author {
     padding: 0px;
 }
 
+.post-buttons .responsive-menu {display: none;}
+
 .button {
     border: 0px;
     background-image: none;
@@ -140,7 +145,7 @@ p.author {
 
 .button:hover {
     border-color: #0000;
-    background-color: #0000;
+    background-color: #fafafa;
     background-image: none;
 }
 
@@ -332,14 +337,28 @@ dd.lastpost > span {
     padding-left: 0px;
 }
 
+
+.cp-main ul.topiclist dt, ul.topiclist dd {
+    float: left !important;
+}
+
+.cp-main ul.topiclist li.row dd {
+    margin-left: 0px;
+}
+
+.cp-main ul.topiclist li.row dd::before {
+    content: '';
+}
+
 /*-------------------*\
     Thread lists
 \*-------------------*/
 
 .headerbar, .forumbg {
-    background-color: #000;
+    background-color: #fff;
     background-image: none;
     border-radius: 0px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .row-item {
@@ -350,10 +369,17 @@ dd.lastpost > span {
     min-height: 40px;
 }
 
+.topiclist .header {
+    display: block;
+}
+
 .topiclist .row-item {
     display: block;
     min-height: auto;
+}
 
+.cplist .row-item {
+    display: grid;
 }
 
 /* thread rows */
@@ -441,7 +467,7 @@ body {margin: 0px; padding: 0px;}
 #header {grid-area: header; height: 100%; z-index: 10; background-color: #fff; box-shadow: 1px 1px 7px rgba(0,0,0,0.2); font-family: 'Open Sans'}
 #header h1 {margin: 0px; font-family: 'Neverwinter', 'Open Sans'; font-size: 36px;}
 #header h1 a {color: #333; font-weight: 400; text-decoration: none;}
-.header-content-wrap {display:grid; grid-template-columns: 10% 80% 10%; margin: 0 auto; max-width: 2000px; padding: 0 20px; position: relative; grid-template-areas: "nav-mini nav-left  nav-small"}
+.header-content-wrap {display:grid; grid-template-columns: 10% 80% 10%; margin: 0 auto; max-width: 2000px; padding: 0 20px; position: relative; grid-template-areas: "nav-left . nav-small"}
 nav {justify-self: center; margin-top: 12px;}
 nav a {font-weight: 300; font-size: 16px; text-decoration: none; color: #333333; margin: 0 15px; padding-bottom: 3px; border-bottom: 1px solid rgba(0,0,0,0); transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
 nav a:hover {border-bottom: 1px solid #333;}
@@ -449,7 +475,7 @@ nav a:hover {border-bottom: 1px solid #333;}
 .nav-center {grid-area: nav-center; display: none;}
 .nav-right {grid-area: nav-right; justify-self: end; display: none;}
 .nav-small {grid-area: nav-small; justify-self: end;}
-.nav-mini {grid-area: nav-mini; display: none;}
+.nav-mini {grid-area: nav-mini; display: none; font-size: 30px;}
 
 
 /* CSS for Hamburger Nav menu */
@@ -497,11 +523,12 @@ nav a:hover {border-bottom: 1px solid #333;}
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 60px calc(100% - 60px);
-    grid-template-rows: 50px calc(100vh - 55px); 
+    grid-template-rows: 50px calc(100vh - 50px); 
     grid-template-areas: 
     "header header"
     "sidebar content"
     ;
+    height: 99%;
 }
 
 .page-expand {
@@ -537,7 +564,7 @@ a.header-avatar {
 }
 /* User avatar */
 a.header-avatar img {
-    max-height: 50px;
+    max-height: 40px;
     width: auto;
     border-radius: 50%;
     justify-self: center;
@@ -554,7 +581,6 @@ a.header-avatar span::after {
 
 #sidebar.sidebar-expand {
     width: 170px;
-    overflow: hidden;
 }
 
 
@@ -598,8 +624,9 @@ a.header-avatar span::after {
 
 .sidebar-search {
     display: grid;
-    grid-template-columns: 7% 93%;
+    grid-template-columns: 8% 92%;
     justify-items: left;
+    padding: 0px;
 }
 
 .search-box {
@@ -609,10 +636,12 @@ a.header-avatar span::after {
 
 .search-box .inputbox {
     border-radius: 0px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    border: 0px;
     height: 22.2px;
     width: auto;
+}
+
+.sort-box {
+    padding: 10px 0;
 }
 
 .dropdown fieldset.display-options label {
@@ -668,6 +697,14 @@ ul.linklist > li {
     background-color: #fff;
 }
 
+.dropdown-contents ul {
+    padding: 0px;
+}
+
+.notification_text {
+    margin-left: 0px;
+}
+
 /*----------------------------*\
     Floating action buttons
 \*----------------------------*/
@@ -683,6 +720,7 @@ ul.linklist > li {
     transition: linear 0.5s;
     -moz-transition: linear 0.5s;
     -webkit-transition: linear 0.5s;
+    list-style-type: none;
 }
 
 .floating-action-button:hover {
@@ -764,6 +802,11 @@ ul.linklist > li {
     Buttons
 \*----------*/
 
+button {
+    border: 0px;
+    padding: 0px;
+}
+
 input.button1 {
     border: none;
     background-image: none;
@@ -805,14 +848,15 @@ input.button2:hover {
     INPUT BOX
 \*---------------*/
 
-.inputbox:hover {
-    border-color: cornflowerblue;
-}
 
 
 /*---------------*\
     Pagination
 \*---------------*/
+
+.pagination ul {
+    padding: 0px;
+}
 
 .pagination li.active span {
     background-color: cornflowerblue;
@@ -1003,10 +1047,17 @@ input.button2:hover {
     MEDIA QUERIES
 \*----------------------*/
 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1500px) {
+    ul.forums {grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+}
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
      .row-item {grid-template-columns: 2% 30% 20% 10% 10% 25%}
+     .floating-action-button {bottom: 40px; right: 40px;}
+
 }
 
 /* Medium Devices, Desktops */
@@ -1038,9 +1089,16 @@ input.button2:hover {
     #whole-page-wrap {grid-template-areas: "header header" "content content";}
     .sidebar-mini {display: none;}
     .nav-mini {display: initial;}
-    .sidebar-expand {display: initial;}
-    .page-expand {grid-template-areas: "header header" "sidebar content" !important;}
+    .sidebar-expand {display: initial; z-index: 2;}
+    .page-expand {grid-template-areas: "header header" "sidebar content" !important; grid-template-columns: 0px 100%  !important;}
     .nav-left {justify-self: center;}
+    .sidebar-toggle-arrow {display: none;}
+    .header-content-wrap {grid-template-areas: "nav-mini nav-left nav-small";}
+    .post-grid-wrap {grid-template-columns: 100%;}
+    .post-arrow {display: none;}
+    .postprofile {min-height: initial; display: none;}
+    .floating-action-button {display: initial !important;}
+    .postbody .content {padding-top: 10px;}
 }
 
 /* Custom, iPhone Retina */ 

@@ -34,9 +34,9 @@
 				</div>
 			</li>
 			<!-- ENDIF -->
-			<hr class="dashed" />
+
 			<!-- IF S_SELECT_SORT_DAYS and not S_IS_BOT -->
-			<form method="post" action="{S_FORUM_ACTION}">
+			<form method="post" action="{S_FORUM_ACTION}" class="sort-box">
 
 				<fieldset class="display-options">
 					<!-- IF S_SORT_OPTIONS -->
@@ -46,7 +46,7 @@
 					<label>{L_SORT_DIRECTION}{L_COLON}
 						<select name="sd" id="sd">{S_ORDER_SELECT}</select>
 					</label>
-					<hr class="dashed" />
+
 					<input type="submit" class="button2" name="sort" value="{L_SORT}" />
 					<!-- ELSE -->
 					<label>{L_DISPLAY}{L_COLON} {S_SELECT_SORT_DAYS}</label>
@@ -54,7 +54,7 @@
 					<label>{L_SORT_BY}{L_COLON} {S_SELECT_SORT_KEY}</label>
 					<label>{L_SORT_DIRECTION}{L_COLON} {S_SELECT_SORT_DIR}</label>
 					<!-- ENDIF -->
-					<hr class="dashed" />
+
 					<input type="submit" class="button2" name="sort" value="{L_GO}" />
 					<!-- ENDIF -->
 				</fieldset>

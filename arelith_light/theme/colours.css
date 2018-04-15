@@ -1,0 +1,46 @@
+.badge {
+    background-color: cornflowerblue; 
+    color: #fff;
+}
+
+
+
+.dropdown-extended ul li {
+    background-color: #fff;
+}
+
+.dropdown-extended form {
+    background-color: #fff;
+}
+
+.dropdown-extended .search-box {
+    background-color: #fff;
+}
+
+button {
+    background-color: #fff;
+    color: #555;
+}
+
+.search-box .inputbox {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.dropdown-extended .footer {
+    background-color: #fff;
+}
+
+
+
+tr:hover {
+    background-color: #fafafa;
+}
+
+.pagination li {
+    color: #fff;
+}
+
+.pagination li a:hover {
+    color: #fff;
+}
+
