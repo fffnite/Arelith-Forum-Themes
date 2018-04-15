@@ -1,16 +1,56 @@
 /* background-color; color; border; transition */
 
+#header {background-color: #fff;}
+#sidebar {background-color: #fafafa;}
+#wrap {}
+
+li.row {background-color: #ffffff;}
+.postbody {background-color: #ffffff;}
+.post-arrow::before {color: #ffffff;}
+.panel {background-color: #ffffff;}
+.tabs {background-color: #ffffff; border-bottom: 1px solid #efefef;}
+nav a:hover {border-bottom-color: inherit;}
+.headerbar, .forumbg {background-color: #ffffff;}
+
+/* text */
+
+a {color: rgba(0,0,0,87);}
+.search-box .inputbox {color: rgba(0,0,0,0.87);}
+button {color:rgba(0,0,0,0.87);}
+
+body {color: rgba(0,0,0,0.54);}
 
 /* Sidebar */
 
-.badge {background-color: cornflowerblue; color: #fff;}
 .dropdown-extended .header {background-color: #FAFAFA;}
 .dropdown-extended ul li {background-color: #FAFAFA;}
 .dropdown-extended form {background-color: #FAFAFA;}
 .dropdown-extended .search-box {background-color: #FAFAFA;}
 .dropdown-extended .footer {background-color: #FAFAFA;}
 .search-box .inputbox {background-color: #FAFAFA;}
-button {background-color: #FAFAFA; color: #555;}
+button {background-color: #FAFAFA;}
+.button {background-color: #fafafa;}
+.button:hover {background-color: cornflowerblue;}
+
+.sidebar-button:hover {background-color: #efefef;}
+.dropdown-extended ul li:hover {background-color: #efefef;}
+.navigation a:hover {background-color: #efefef;}
+.navigation .active-subsection a {background-color: #efefef;}
+
+select {background-color: inherit; color: inherit;}
+option {background-color: #efefef; color: inherit;}
+
+/* accents */
+
+.badge {background-color: cornflowerblue; color: #fff;}
+.floating-action-button {background-color: cornflowerblue;}
+.pagination li.active span {background-color: cornflowerblue; border-color: cornflowerblue;}
+.pagination li a:hover {background-color: cornflowerblue;}
+.pagination li a:hover .icon {background-color: cornflowerblue;}
+.tabs .activetab a {border-color: cornflowerblue;}
+.tabs .tab:hover {border-color: cornflowerblue;}
+input.button1 {background-color: cornflowerblue;}
+input.button2 {background-color: cornflowerblue;}
 
 /* Input boxes */
 
