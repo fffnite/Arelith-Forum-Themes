@@ -1,66 +1,29 @@
-.badge {
-    background-color: cornflowerblue; 
-    color: #fff;
-}
+/* background-color; color; border; transition */
 
 
-.dropdown-extended ul li {
-    background-color: #fff;
-}
+/* Sidebar */
 
-.dropdown-extended form {
-    background-color: #fff;
-}
+.badge {background-color: cornflowerblue; color: #fff;}
+.dropdown-extended .header {background-color: #FAFAFA;}
+.dropdown-extended ul li {background-color: #FAFAFA;}
+.dropdown-extended form {background-color: #FAFAFA;}
+.dropdown-extended .search-box {background-color: #FAFAFA;}
+.dropdown-extended .footer {background-color: #FAFAFA;}
+.search-box .inputbox {background-color: #FAFAFA;}
+button {background-color: #FAFAFA; color: #555;}
 
-.dropdown-extended .search-box {
-    background-color: #fff;
-}
+/* Input boxes */
 
-button {
-    background-color: #fff;
-    color: #555;
-}
+.inputbox {border-bottom: 2px solid #eee; transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
+.inputbox:hover {border-bottom: 2px solid cornflowerblue;}
+.inputbox:focus {border-bottom: 2px solid cornflowerblue;}
+textarea.inputbox {border: 2px solid #eee; transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;}
+textarea.inputbox:hover {border: 2px solid cornflowerblue;}
+textarea.inputbox:focus {border: 2px solid cornflowerblue;}
 
-.inputbox {
-    border-bottom: 2px solid #eee;
-    transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;
-}
+/* Pagination */
 
-.inputbox:hover {
-    border-bottom: 2px solid cornflowerblue;
-}
-
-.inputbox:focus {
-    border-bottom: 2px solid cornflowerblue;
-}
-
-textarea.inputbox {
-    transition: linear 0.5s; -moz-transition: linear 0.5s; -webkit-transition: linear 0.5s;
-    border: 2px solid #eee;
-}
-
-textarea.inputbox:hover {
-    border: 2px solid cornflowerblue;
-}
-
-textarea.inputbox:focus {
-    border: 2px solid cornflowerblue;
-}
-
-.dropdown-extended .footer {
-    background-color: #fff;
-}
-
-
-tr:hover {
-    background-color: #fafafa;
-}
-
-.pagination li {
-    color: #fff;
-}
-
-.pagination li a:hover {
-    color: #fff;
-}
+tr:hover {background-color: #fafafa;}
+.pagination li {color: #fff;}
+.pagination li a:hover {color: #fff;}
 

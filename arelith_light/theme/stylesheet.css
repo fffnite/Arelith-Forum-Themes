@@ -687,10 +687,16 @@ ul.linklist > li {
     border-radius: 0px;
     border: 0px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    left: 60px !important;
+    top: -20px !important;
 }
 
 .dropdown .pointer {
     border-color: #fff transparent;
+}
+
+.dropdown .header {
+    border-radius: 0px;
 }
 
 .dropdown-extended .pointer-inner {
@@ -707,7 +713,6 @@ ul.linklist > li {
 
 .dropdown-extended .header {
     background-image: none;
-    background-color: #fff;
 }
 
 .dropdown-contents ul {
