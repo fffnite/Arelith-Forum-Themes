@@ -256,7 +256,7 @@ ul.topiclist dt, ul.topiclist dd {
 
 .forum-title-wrap {
     display: grid;
-    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    grid-template-columns: calc(100% / 2) calc(100% / 2);
     align-items: end;
 }
 
